@@ -39,7 +39,7 @@ export default function Game(){
         <main className="men">
             <section className="sesion w-80 rounded-xl">
                 <div className="board">
-                    <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+                    <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} indexHistory={false} />
                 </div>
                 <div className="text-center pb-2">
                     <ol>{moves}</ol>
