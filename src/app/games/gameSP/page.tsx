@@ -7,6 +7,7 @@ import calculateWinner from "@/app/functions/CalculateWinner";
 export default function Game(){
     const [history,setHistory]=useState([Array(9).fill(null)]);
     const [currentMove, setCurrentMove]=useState(0);
+    const [indexHistory,setIndexHistory]=useState([]);
 
     const currentSquares=history[currentMove];
     const xIsNext=true;
@@ -49,7 +50,7 @@ export default function Game(){
         <main className="men">
             <section className="sesion w-80 rounded-xl">
                 <div className="board">
-                    <Board xIsNext={true} squares={currentSquares} onPlay={handlePlay} indexHistory={[]} />
+                    <Board xIsNext={true} squares={currentSquares} onPlay={handlePlay} indexHistory={indexHistory} />
                 </div>
                 <div className="text-center pb-2">
                     <ol>{moves}</ol>
